@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="resume.css">
+</head>
+
+<body>
+    <header>
+        <h1>SSUN's protfolio </h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li>|</li>
+                <li><a href="#protfolio">Portfolio</a></li>
+                <li>|</li>
+                <li><a href="#skills">Skills</a></li>
+                <li>|</li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello, I am Ssun! I have a super genius sister. Of course, me too. Have a good day :)
+        </p>
+    </section>
+
+    <hr>
+
+    <section id="protfolio">
+        <h2>Portfolio</h2>
+        <div class="gallery">
+            <div class="item">
+                <img src="롬2112.jpg">
+                <div>Romans 12:21</div>
+            </div>
+
+            <div class="item">
+                <img src="잠언66.jpg">
+                <p>Proverbs 6:6</p>
+            </div>
+
+            <div class="item">
+                <img src="이사야601.jpg">
+                <p>Isaiah 60:1</p>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="gallery">
+            <div class="it">
+                <img src="https://cdn.serif.com/affinity/img/global/logos/affinity-designer-2-020520191502.svg"
+                    style="width: 100px;">
+                <p>Affinity Designer</p>
+            </div>
+
+            <div class="it">
+                <img src="https://cdn.serif.com/affinity/img/global/logos/affinity-photo-2-020520191502.svg"
+                    style="width: 100px;">
+                <p>Affinity Photo</p>
+            </div>
+
+            <div class="it">
+                <img src="https://cdn.serif.com/affinity/img/global/logos/affinity-publisher-2-020520191502.svg"
+                    style="width: 100px;">
+                <p>Affinity Publisher</p>
+            </div>
+
+            <div class="it">
+                <img src="https://i.namu.wiki/i/9iJ3Dl7tsy03aXJYUdF33ASDc8hVv8OuL3Mj5JVPiaIG_Vs-fEHoj4XOy9GdOv0yFGWGqerAIPGE9HyzZi2tEKL41IQEidZiBkDuvc9ruEMcYpyQOaPBoIrXCV6Tpi-Motsrd4fydv5EzOD9EOYR0A.svg"
+                    style="width: 100px;">
+                <p>Adobe Photoshop</p>
+            </div>
+
+
+            <div class="it">
+                <img src="https://i.namu.wiki/i/KWAqJ-vi_MiNr3p6BTQdsGBfjUVm6PqJhyNzM7csCCSlXRRyJ9HUKnvt6Py8xCvCI6ofoPc53nonaK2RSaXZVQVCnvnEP5nRLl6inzoLr8PXmeozFeO23Ynn5BAC6X59ipwpcy2f7AMYZvoWgbCM0g.svg"
+                    style="width: 100px;">
+                <p>Premiere Pro</p>
+            </div>
+
+            <div class="it">
+                <img src="https://i.namu.wiki/i/kPE5W5fCzB-AzzZTs_GFKI2f1Y1VOkqBsd5cmmqotmKvjWJVablL2a9ycJRfEnR8YocLRGk4k9zrkbm1ObflGUlw65EyjT0-HGor5iz_5Rx2S47PZ9wRMTcbvzSGjPkP8rOdT_yRI0k88tAW_GONUw.svg"
+                    style="width: 100px;">
+                <p>Adobe Illustrator</p>
+            </div>
+
+            <div class="it">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968770.png"
+                    style="width: 100px; border-radius: 15px;">
+                <p>Wix</p>
+            </div>
+
+            <div class="it">
+                <img src="https://grepp-programmers.s3.amazonaws.com/production/company/logo/3219/Future_Favicon_512_512.png"
+                    style="width: 100px; border-radius: 15px;">
+                <p>Imweb</p>
+            </div>
+
+            <div class="it">
+                <img src="https://i.namu.wiki/i/7mPAepdxpPWLMOCfQAQgdEam6CrFCJzNsVfRD9ytNGcohV4DK7izi-HmPP7e0pQYY6En7gTMyoFmD2iUW4QHzXzywIFXOg14rRkr0rfAHa2BXoUpTuMX_1XkTHb7luPvkN4tggILsoOoeGMvsBuMtA.webp"
+                    style="width: 100px; border-radius: 15px;">
+                <p>Procreate</p>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="contact" style="margin-bottom: 100px;">
+        <h2>Contact</h2>
+        <div>veldy.sunsun@gmail.com</div>
+        <div>010-2737-5790</div>
+    </section>
+
+    <footer>
+        <p>@ 2024 My protfolio, ssun</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navbarLinks = document.querySelectorAll("nav a");
+
+            navbarLinks.forEach(link => {
+                link.addEventListener("click", function (event) {
+                    event.preventDefault();
+
+                    const targetId = this.getAttribute("href").substring(1);
+                    const targetElement = document.getElementById(targetId);
+
+                    if (targetElement) {
+                        const targetPosition = targetElement.offsetTop;
+                        const startPosition = window.pageYOffset;
+                        const distance = targetPosition - startPosition;
+                        const duration = 1500; // 이동 시간을 1.5초로 설정
+
+                        let start = null;
+
+                        function step(timestamp) {
+                            if (!start) start = timestamp;
+                            const progress = timestamp - start;
+
+                            window.scrollTo(0, easeInOutQuad(progress, startPosition, distance, duration));
+
+                            if (progress < duration) {
+                                window.requestAnimationFrame(step);
+                            }
+                        }
+
+                        window.requestAnimationFrame(step);
+                    }
+                });
+            });
+
+            // Easing 함수
+            function easeInOutQuad(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t + b;
+                t = t - 1;
+                return -c / 2 * (t * (t - 2) - 1) + b;
+            }
+        });
+    </script>
+
+</body>
+
+</html>
